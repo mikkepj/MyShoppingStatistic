@@ -15,12 +15,12 @@ public class Person implements Serializable {
     private LocalDate birthdate;
     private String addresses;
 
-    public Person(){
+    public Person() {
 
     }
 
     public Person(String name, String firstLastname, String secondLastname, String mail, String phone,
-                LocalDate birthdate, String addresses){
+                  LocalDate birthdate, String addresses) {
         this.name = name;
         this.firstLastname = firstLastname;
         this.secondLastname = secondLastname;
