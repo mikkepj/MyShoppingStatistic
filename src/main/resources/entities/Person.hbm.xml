@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mikke.shoppstat.entities.Person" table="person">
+        <id name="id" column="ID">
+            <generator class="identity" />
+        </id>
+
+        <!-- Mapeo de atributos de la clase a columnas en al BD-->
+        <property name="name" type="java.lang.String" length="100" column="name" not-null="true"/>
+        <property name="firstLastname" type="java.lang.String" length="100" column="firstLastname" not-null="false" />
+        <property name="secondLastname" type="java.lang.String" length="100" column="secondLastname" not-null="false" />
+        <property name="mail" type="java.lang.String" length="50" column="mail" not-null="false" />
+        <property name="phone" type="java.lang.String" length="50" column="phone" not-null="false" />
+        <property name="birthdate" type="java.time.LocalDate" column="birthdate" not-null="false" />
+        <property name="addresses" type="java.lang.String" length="255" column="addresses" not-null="true" />
+
+    </class>
+
+</hibernate-mapping>

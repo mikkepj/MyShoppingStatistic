@@ -1,0 +1,4 @@
+com\mikke\shoppstat\utils\HibernateUtil.class
+com\mikke\shoppstat\entities\Person.class
+com\mikke\shoppstat\Principal.class
+com\mikke\shoppstat\DAO\PersonDAO.class
