@@ -12,7 +12,6 @@ public class Product implements Serializable {
     private String providerName;
     private String tradeMark;
     private LocalDateTime factoryDate;
-    private Double price;
 
     public Product() {
 
@@ -27,7 +26,6 @@ public class Product implements Serializable {
         this.providerName = providerName;
         this.tradeMark = tradeMark;
         this.factoryDate = factoryDate;
-        this.price = price;
     }
 
     public Long getId() {
@@ -86,11 +84,4 @@ public class Product implements Serializable {
         this.factoryDate = factoryDate;
     }
 
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 }

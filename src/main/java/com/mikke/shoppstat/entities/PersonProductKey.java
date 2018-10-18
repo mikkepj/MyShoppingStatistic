@@ -18,7 +18,7 @@ public class PersonProductKey implements IPersonProductKey {
 
     @Override
     public void setProductId(Long productId) {
-
+        this.productId = productId;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class PersonProductKey implements IPersonProductKey {
 
     @Override
     public void setPersonId(Long personId) {
-
+        this.personId = personId;
     }
 
     @Override
@@ -43,5 +43,32 @@ public class PersonProductKey implements IPersonProductKey {
             return (result > 0) ? 1 : -1;
         }
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (o != null && o instanceof PersonProductKey) {
+            PersonProductKey that = (PersonProductKey) o;
+            return this.personId.equals(that.personId) && this.productId.equals(that.productId);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return personId.hashCode() + productId.hashCode();
+    }
+
+    public PersonProductKey ()
+    {
+
+    }
+
+    public PersonProductKey (Long archiveid, Long tagtypeid)
+    {
+        this.personId = new Long (personId);
+        this.productId = new Long (productId);
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mikke.shoppstat.entities.Product" table="person">
+        <id name="id" column="ID">
+            <generator class="identity" />
+        </id>
+
+        <!-- Mapeo de atributos de la clase a columnas en al BD-->
+        <property name="productCode" type="java.lang.String" length="100" column="productCode" not-null="true"/>
+        <property name="description" type="java.lang.String" length="100" column="description" not-null="false" />
+        <property name="providerName" type="java.lang.String" length="100" column="providerName" not-null="false" />
+        <property name="tradeMark" type="java.lang.String" length="100" column="tradeMark" not-null="false" />
+        <property name="factoryDate" type="java.time.LocalDate" column="factoryDate" not-null="false" />
+
+        <many-to-one name="category" class="com.mikke.shoppstat.entities.Category" column="PRODUCT_CAT_ID" not-null="true" />
+        <many-to-one name="provider" class="com.mikke.shoppstat.entities.Provider" column="PROVIDER_ID" not-null="true" />
+
+    </class>
+
+</hibernate-mapping>
